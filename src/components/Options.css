@@ -1,0 +1,13 @@
+.options button {
+    background-color: #31a19c;
+    padding: 0.5%;
+    color: white;
+    border-radius: 9px;
+    width: 10%;
+    transition-duration: .4s;
+    margin-right: 1.2%;
+}
+
+button:hover{
+    background-color: #252525e1;
+}

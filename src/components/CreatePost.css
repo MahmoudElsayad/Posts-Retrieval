@@ -1,0 +1,78 @@
+
+
+form {
+    position: relative;
+    z-index: 2;
+    margin-top: 7%;
+}
+
+.create-post {
+    margin-bottom: 1rem;
+}
+
+.create-post input {
+    display: block;
+    appearance: none;
+    outline: 0;
+    border: 1px solid white;
+    background-color: #e8e8e8;
+    width: 40%;
+    border-radius: 7px;
+    padding: 10px 15px;
+    margin: 0 auto 10px auto;
+    text-align: center;
+    font-size: 18px;
+    color: #252525;
+    transition-duration: 0.9s;
+    font-weight: 300;
+}
+
+.create-post input:first-child {
+    height: 1rem;
+}
+
+.create-post input:nth-child(2) {
+    height: 3rem;
+}
+
+input:hover{
+    border-bottom: 2px solid #31a19c;
+    transition-duration: .5s;
+}
+
+.create-post input:nth-child(2):focus{
+    font-size: 13px;
+    transition-duration: .4s;
+}
+
+.create-post button {
+    appearance: none;
+    outline: 0;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 3px;
+    width: 10%;
+    cursor: pointer;
+    font-size: .8rem;
+    transition-duration: 0.25s;
+    margin: 1rem;
+}
+
+.example-enter {
+    opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+    opacity: 1;
+}
+
+.example-leave.example-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+}
+/*#53e3a6*/
