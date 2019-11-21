@@ -1,0 +1,23 @@
+
+.kJJeuU {
+    padding: 14px 20px;
+    border: 1px solid #f9f9f9;
+    color: #ffffff;
+    background-color: #252525;
+    font-size: 18px;
+    width: 250px;
+    border-radius: 6px 0px 0px 6px;
+    -webkit-flex: 7;
+    -ms-flex: 7;
+    flex: 7;
+}
+
+.search-button{
+    width: 14%;
+    transition-duration: 1s;
+    background-color: #29a19c;
+}
+
+.search-button:hover {
+    color:white;
+}
