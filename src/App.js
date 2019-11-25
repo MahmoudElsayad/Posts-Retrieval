@@ -8,7 +8,6 @@ function App() {
   return (
     <div className="app">
       <Search />
-      <Options viewCreate={false}/>
       <Posts />
     </div>
   );

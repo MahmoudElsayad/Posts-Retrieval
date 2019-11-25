@@ -7,7 +7,7 @@ import './Options.css';
 class Options extends Component {
 
     state = {
-        viewCreate: ''
+        viewCreate: '',
     };
 
     handleChange = () => {
@@ -22,10 +22,11 @@ class Options extends Component {
     };
 
     render() {
-
+        const { post } = this.props;
+        const { userId } = post || [];
         return (
             <div className="options">
-                {this.state.viewCreate && <CreatePost view={this.state.viewCreate}/>}
+                {this.state.viewCreate && <CreatePost userId={userId} view={this.state.viewCreate}/>}
                 <UndoArchive/>
                 <span><Button onClick={this.handleChange}>
                     {this.createPostButton()}
@@ -35,6 +36,8 @@ class Options extends Component {
 
     }
 }
+
+
 
 
 export default Options;

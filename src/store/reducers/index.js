@@ -6,7 +6,7 @@ import comments from "./comments";
 const rootReducer = combineReducers({
     postsState: posts,
     archiveState: archiveReducer,
-    commentsState: comments
+    commentsState: comments,
 });
 
 export default rootReducer;

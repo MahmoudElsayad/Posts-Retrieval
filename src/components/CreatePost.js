@@ -1,27 +1,29 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import "./CreatePost.css"
-// import { createPost } from '../store/action/createPost';
+import { createPost } from '../store/action/createPost';
 import * as PropTypes from "prop-types";
 
 class CreatePost extends Component {
     state = {
         postTitle: '',
         post: '',
-        id: this.props.userId,
+        userId: this.props.userId,
         error: '',
+        onCreatePost: this.props.onCreatePost
     };
 
     sendRequest = e => {
+        let { onCreatePost, userId, post } = this.state;
         e.preventDefault();
-        console.log(this.state)
+        onCreatePost(userId,this.state.postTitle, post);
     };
 
     handleTitle = title => this.setState({postTitle: title.target.value});
     handlePost = post => this.setState({post: post.target.value});
 
     render() {
-        let { onCreatePost, view, postTitle, post, id} = this.props;
+        let { view, postTitle, post} = this.props;
         if (view)
             return (
                 <div className="create-post center">
@@ -45,10 +47,10 @@ CreatePost.propTypes = {
     userId: PropTypes.any,
     onCreatePost: PropTypes.any,
     view: PropTypes.any
-}
+};
 
 const mapDispatchToProps = dispatch => ({
-    // onCreatePost: id => dispatch(createPost(id))
+    onCreatePost: (userId, postTitle, post) => dispatch(createPost(userId, postTitle, post))
 });
 
 export default connect(null, mapDispatchToProps)(CreatePost);

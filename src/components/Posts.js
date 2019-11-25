@@ -5,11 +5,14 @@ import {
 } from '../store/selectors/posts';
 import Post from './Post';
 import './Posts.css'
+import Options from "./Options";
 
 class Posts extends Component {
     render() {
         const { posts } = this.props;
         return (
+            <div>
+            <Options post={posts[0]} viewCreate={false}/>
             <div className="posts">
                 <h3 id="floating-counter">
                     {posts.length}
@@ -20,6 +23,8 @@ class Posts extends Component {
                         post={post}
                     />)}
             </div>
+            </div>
+
         )
     }
 }
